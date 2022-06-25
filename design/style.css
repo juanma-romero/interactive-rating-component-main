@@ -1,0 +1,107 @@
+body {
+    background-color: hsl(216, 12%, 8%);
+    font-family: 'Overpass', sans-serif;
+    width: 1440px;
+    color: hsl(0, 0%, 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.backImagen {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #262F38;
+    
+}
+
+img {
+    position: relative;
+    margin-left: 30%;
+    margin-top: 30%;
+}
+
+.card {
+    
+    background-color: #19202A;    
+    border-radius: 7%;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    
+}
+
+h1 {
+    font-size: 29px;
+    margin-bottom: 0px;
+}
+
+.backBoton {
+    width: 50px;
+    height: 50px;
+    background-color: #262F38;    
+    border-radius: 50%;
+}
+
+.botonChico {
+    padding: 0%;
+    display: inline;
+    position: relative;
+    margin-left: 38%;
+    margin-top: 30%;
+    border: none;
+    background-color: #262F38;
+    font-size: 16px;       
+    color: hsl(217, 12%, 63%);    
+}
+
+.backBoton:hover .botonChico {
+    background-color: #7C8798;
+    cursor: pointer;
+}
+
+
+.backBoton:hover {
+    background-color: #7C8798;
+    cursor: pointer;
+}
+
+
+
+p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: hsl(217, 12%, 63%);
+    line-height: 1.7
+}
+
+.boton {
+    
+    margin-top: 27px;
+    padding: 15px;
+    color: hsl(0, 0%, 100%);
+    border: 1px solid #591202;
+    border-radius: 30px;
+    display: block;
+    background-color: hsl(25, 97%, 53%);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    
+    width: 100%;
+}
+
+.boton:hover {
+    background-color:hsl(0, 0%, 100%);
+    color:hsl(25, 97%, 53%);
+    cursor: pointer;
+}
+
+.content {
+    margin-top: 14px;
+}
