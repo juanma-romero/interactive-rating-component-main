@@ -166,7 +166,7 @@ p {
 }
 
 /* Do an horizontal flip when you click the button 'submit' */
-.h1:hover .card-inner {
+.card-main:hover .card-inner {
     transform: rotateY(180deg);
 }
   
