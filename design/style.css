@@ -104,4 +104,43 @@ p {
 
 .content {
     margin-top: 14px;
+} 
+
+.radio-toolbar {
+    display: flex;
+    justify-content: space-between;
 }
+
+.radio-toolbar input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+  }
+  
+.radio-toolbar label {
+    height: 47px;
+    width: 47px;
+    display: inline-block;
+    background-color: #262F38;     
+    border-radius: 50%;
+    padding: 0%;    
+    border: none;
+    background-color: #262F38;
+    font-size: 16px;       
+    color: hsl(217, 12%, 63%);
+    text-align: center;
+    line-height: 2.9em;
+    
+  }
+  
+  .radio-toolbar label:hover {
+    color: hsl(0, 0%, 100%);
+    background-color:hsl(25, 97%, 53%);
+    cursor: pointer;
+  }  
+  
+  .radio-toolbar input[type="radio"]:checked + label {
+    color: hsl(0, 0%, 100%);
+    background-color: #7C8798;
+      
+  }
