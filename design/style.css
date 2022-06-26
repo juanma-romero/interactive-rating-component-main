@@ -23,16 +23,26 @@ img {
     margin-top: 30%;
 }
 
-.card {
-    
+.card-front {    
     background-color: #19202A;    
     border-radius: 7%;
     width: 350px;
     height: 350px;
     display: flex;
     flex-direction: column;
-    padding: 30px;
-    
+    padding: 30px;    
+}
+
+.card-back {
+    background-color: #19202A;    
+    border-radius: 7%;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px; 
+    position: relative;
+    top: -410px;
 }
 
 h1 {
@@ -69,8 +79,6 @@ h1 {
     background-color: #7C8798;
     cursor: pointer;
 }
-
-
 
 p {
     margin-top: 10px;
@@ -131,16 +139,45 @@ p {
     text-align: center;
     line-height: 2.9em;
     
-  }
+}
   
-  .radio-toolbar label:hover {
+.radio-toolbar label:hover {
     color: hsl(0, 0%, 100%);
     background-color:hsl(25, 97%, 53%);
     cursor: pointer;
-  }  
+}  
   
-  .radio-toolbar input[type="radio"]:checked + label {
+.radio-toolbar input[type="radio"]:checked + label {
     color: hsl(0, 0%, 100%);
     background-color: #7C8798;
       
-  }
+}
+
+.card-main {
+    /*background-color: transparent;*/
+    
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+  
+  /* This container is needed to position the front and back side */
+.card-inner {       
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you click the button 'submit' */
+.h1:hover .card-inner {
+    transform: rotateY(180deg);
+}
+  
+  /* hide back-side of each card */
+.card-front, .card-back {    
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}  
+
+
+  /* Style the back side */
+.card-back {    
+    transform: rotateY(180deg);
+}
