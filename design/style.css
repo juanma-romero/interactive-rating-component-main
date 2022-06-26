@@ -17,11 +17,17 @@ body {
     
 }
 
-img {
+#img-front {
     position: relative;
     margin-left: 30%;
     margin-top: 30%;
 }
+
+#img-back {
+    width: 160px;
+    
+}
+
 
 .card-front {    
     background-color: #19202A;    
@@ -40,6 +46,7 @@ img {
     height: 350px;
     display: flex;
     flex-direction: column;
+    
     padding: 30px; 
     position: relative;
     top: -410px;
@@ -153,6 +160,8 @@ p {
       
 }
 
+
+
 .card-main {
     /*background-color: transparent;*/
     
@@ -180,4 +189,13 @@ p {
   /* Style the back side */
 .card-back {    
     transform: rotateY(180deg);
+}
+#p-text {
+    text-align: center;
+}
+#p-result {
+    background-color: #262F38;
+    padding: 3px;
+    border-radius: 30%;
+    color: hsl(25, 97%, 53%);
 }
