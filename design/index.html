@@ -3,23 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
     <title>Interactive rating component</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
     <link type="text/css" rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
-    <script>  
-      function fun() {  
-        
-        console.log('clic')
-        document.getElementById('card-inner').style.transform = 'rotateY(180deg)'
-                 
-
-      }  
-      </script>
+    
 </head>
 <body>
   
@@ -33,35 +24,60 @@
         </header>
         <div class="content">
             <h1>How did we do?</h1>
-            <p>Please let us know how we did with your support<br> request. All feedback is appreciated to help us<br> improve our offering!</p>
+            <p class="text-screen">Please let us know how we did with your support<br> request. All feedback is appreciated to help us<br> improve our offering!</p>
+            <p class="text-mobile">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
             
-                
-              <div class="radio-toolbar" id="radio-toolbar">
-                <input type="radio" id="1b" name="radioFruit" value="1">
-                <label for="1b">1</label>
+            <form method="post">
+                <div class="radio-toolbar" id="radio-toolbar">
+                  <input type="radio" name="formulario" value="1" id="1f">
+                  <label for="1f">1</label>
+              
+                  <input type="radio" name="formulario" value="2" id="2f">
+                  <label for="2f">2</label>
+              
+                  <input type="radio" name="formulario" value="3" id="3f">
+                  <label for="3f">3</label> 
+
+                  <input type="radio" name="formulario" value="4" id="4f">
+                  <label for="4f">4</label> 
+
+                  <input type="radio"name="formulario" value="5" id="5f">
+                  <label for="5f">5</label> 
+                </div>    
+                <button name="boton-formu" class="boton" type="button" onclick = "getRadioSelection()">SUBMIT</button>
+            </form>      
             
-                <input type="radio" id="2b" name="radioFruit" value="2">
-                <label for="2b">2</label>
             
-                <input type="radio" id="3b" name="radioFruit" value="3">
-                <label for="3b">3</label> 
-                <input type="radio" id="4b" name="radioFruit" value="4">
-                <label for="4b">4</label> 
-                <input type="radio" id="5b" name="radioFruit" value="5">
-                <label for="5b">5</label> 
-            </div>      
-            
-            <button class="boton" type='button' onclick = "fun()">SUBMIT</button>
         </div>
       </div>
       <div class="card-back">
         <img id="img-back" src="/images/illustration-thank-you.svg"/>
-        <p><span id="p-result"> selected <!-- Add rating here --> out of 5</p></span>
+        <p id="p-resultado"><span id="span-resultado"></p></span>
         <h1 style="text-align: center;">Thank you!</h1>
-        <p id="p-text"> We appreciate you taking the time to give a rating.<br> If you ever need more support, 
+        <p id="p-text" class="text-screen"> We appreciate you taking the time to give a rating.<br> If you ever need more support, 
           don’t hesitate to<br> get in touch!</p>
+        <p id="p-text" class="text-mobile"> We appreciate you taking the time to give a rating. If you ever need more support, 
+            don’t hesitate to get in touch!</p>
       </div>
     </div>
   </div>
+  <script>  
+    function getRadioSelection() {  
+      //efecto transicion
+      document.getElementById('card-inner').style.transform = 'rotateY(180deg)'      
+      
+      //recuperar valor seleccionado para insertar en texto agradecimiento
+      let ele = document.getElementsByName('formulario')
+      
+      let valor
+      for(i = 0; i < ele.length; i++) {
+        if(ele[i].checked == true) {
+            valor = ele[i].value + ''
+            var valorSeleccionado = 'You selected '+valor+' out of 5'
+          }
+      }            
+      document.getElementById("span-resultado").innerHTML = valorSeleccionado 
+    }
+    </script>
 </body>
 </html>

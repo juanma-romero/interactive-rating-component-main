@@ -1,7 +1,6 @@
 body {
     background-color: hsl(216, 12%, 8%);
     font-family: 'Overpass', sans-serif;
-    width: 1440px;
     color: hsl(0, 0%, 100%);
     display: flex;
     justify-content: center;
@@ -26,6 +25,7 @@ body {
 #img-back {
     width: 160px;
     margin-left: 87px;
+    margin-top: 15px;
 }
 
 
@@ -121,9 +121,13 @@ p {
     margin-top: 14px;
 } 
 
+
+                            /**
+                                para botones de formulario
+                            */
 .radio-toolbar {
-    display: flex;
-    justify-content: space-between;
+    display: flex;    
+    justify-content: space-between    
 }
 
 .radio-toolbar input[type="radio"] {
@@ -156,16 +160,15 @@ p {
   
 .radio-toolbar input[type="radio"]:checked + label {
     color: hsl(0, 0%, 100%);
-    background-color: #7C8798;
-      
+    background-color: #7C8798;      
 }
 
 
-
-.card-main {
-    /*background-color: transparent;*/
-    
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+                                /** 
+                                Para transicion y efecto 
+                                3d*/
+.card-main {    
+    perspective: 1000px; 
 }
   
   /* This container is needed to position the front and back side */
@@ -190,12 +193,51 @@ p {
 .card-back {    
     transform: rotateY(180deg);
 }
+
 #p-text {
     text-align: center;
 }
-#p-result {
+
+#span-resultado {
     background-color: #262F38;
-    padding: 3px;
-    border-radius: 30%;
+    
+    border-radius: 16px;
     color: hsl(25, 97%, 53%);
+    padding: 8px 20px;
 }
+
+#p-resultado {
+    margin-left: 75px;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+
+.text-mobile { display: none; }
+
+
+
+@media screen and (max-width: 375px) {
+    .card-front {
+      width: 275px;
+      margin-top: 35%;
+      margin-left: 25px;
+      margin-right: 25px;
+      
+    }
+    .text-mobile { display: block; line-height: 1.2; font-size: 13px;}
+    .text-screen { display: none; }
+    .card-back {
+        width: 275px;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    #img-back {
+        margin-left: 60px;
+        width: 140px;
+    }
+    
+    #p-resultado {
+        margin-left: 45px;
+    }
+  }
