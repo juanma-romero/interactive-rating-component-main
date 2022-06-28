@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://github.com/juanma-romero/interactive-rating-component-main)
+- Live Site URL: (https://heroic-mermaid-9a004e.netlify.app/)
 
 
 ## My process
