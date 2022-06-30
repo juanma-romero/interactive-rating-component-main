@@ -31,9 +31,7 @@ body {
 
 .card-front {    
     background-color: #19202A;    
-    border-radius: 7%;
-    width: 350px;
-    height: 350px;
+    border-radius: 7%;    
     display: flex;
     flex-direction: column;
     padding: 30px;    
@@ -41,12 +39,9 @@ body {
 
 .card-back {
     background-color: #19202A;    
-    border-radius: 7%;
-    width: 350px;
-    height: 350px;
+    border-radius: 7%;    
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
     padding: 30px; 
     position: relative;
     top: -410px;
